@@ -1,10 +1,7 @@
 import {StyleSheet} from 'react-native';
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import Profile from '../screens/Profile';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import Training from '../screens/Training';
-import Library from '../screens/Library';
 
 export default function BottomTab() {
   const TabNav = createBottomTabNavigator();
@@ -23,7 +20,7 @@ export default function BottomTab() {
           paddingTop: 10,
         },
       }}>
-      <TabNav.Screen
+      {/* <TabNav.Screen
         name="Training"
         component={Training}
         options={{
@@ -64,7 +61,7 @@ export default function BottomTab() {
             />
           ),
         }}
-      />
+      /> */}
     </TabNav.Navigator>
   );
 }
