@@ -2,6 +2,8 @@ import {StyleSheet} from 'react-native';
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import WeightScaleScreen from '../screens/WeightScaleScreen';
+import HomeScreen from '../screens/HomeScreen';
 
 export default function BottomTab() {
   const TabNav = createBottomTabNavigator();
@@ -12,56 +14,28 @@ export default function BottomTab() {
         tabBarInactiveTintColor: 'grey',
         tabBarLabelStyle: {
           fontWeight: '600',
-          fontSize: 16, // Increased font size
+          fontSize: 16,
         },
         tabBarStyle: {
-          height: 70, // Increased height of the bottom tab bar
+          height: 70,
           paddingBottom: 10,
           paddingTop: 10,
         },
       }}>
-      {/* <TabNav.Screen
-        name="Training"
-        component={Training}
+      <TabNav.Screen
+        name="Home"
+        component={HomeScreen}
         options={{
           headerShown: false,
           tabBarIcon: ({focused}) => (
             <Ionicons
               name={focused ? 'home' : 'home-outline'}
-              size={21} // Increased icon size
+              size={21}
               color={focused ? '#0163d2' : 'grey'}
             />
           ),
         }}
       />
-      <TabNav.Screen
-        name="Library"
-        component={Library}
-        options={{
-          headerShown: false,
-          tabBarIcon: ({focused}) => (
-            <Ionicons
-              name={focused ? 'search' : 'search-outline'}
-              size={21} // Increased icon size
-              color={focused ? '#0163d2' : 'grey'}
-            />
-          ),
-        }}
-      />
-      <TabNav.Screen
-        name="Profile"
-        component={Profile}
-        options={{
-          headerShown: false,
-          tabBarIcon: ({focused}) => (
-            <Ionicons
-              name={focused ? 'person' : 'person-outline'}
-              size={21} // Increased icon size
-              color={focused ? '#0163d2' : 'grey'}
-            />
-          ),
-        }}
-      /> */}
     </TabNav.Navigator>
   );
 }

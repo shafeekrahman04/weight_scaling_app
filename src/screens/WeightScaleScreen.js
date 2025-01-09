@@ -46,18 +46,19 @@ const WeightScaleScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.heartRateTitleWrapper}>
-  {connectedDevice ? (
-    <>
-      <Text style={styles.heartRateTitleText}>Your Weight Is:</Text>
-      <Text style={styles.heartRateText}>{weight}  <Text style={styles.heartRateTitleText}> kg</Text> </Text>
-     
-    </>
-  ) : (
-    <Text style={styles.heartRateTitleText}>
-      Please Connect to a Weight Scale
-    </Text>
-  )}
-</View>
+        {connectedDevice ? (
+          <>
+            <Text style={styles.heartRateTitleText}>Your Weight Is:</Text>
+            <Text style={styles.heartRateText}>
+              {weight} <Text style={styles.heartRateTitleText}> kg</Text>{' '}
+            </Text>
+          </>
+        ) : (
+          <Text style={styles.heartRateTitleText}>
+            Please Connect to a Weight Scale
+          </Text>
+        )}
+      </View>
 
       <TouchableOpacity
         onPress={connectedDevice ? disconnectFromDevice : openModal}

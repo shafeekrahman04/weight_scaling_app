@@ -3,8 +3,10 @@ import React, { useState } from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 import SplashScreen from '../screens/SplashScreen';
-import WeightScreen from '../screens/WeightScreen';
 import BottomTab from './BottomTab';
+import LoginScreen from '../screens/LoginScreen';
+import DriverType from '../screens/DriverType';
+import WeightScaleScreen from '../screens/WeightScaleScreen';
 
 const Stack = createStackNavigator();
 
@@ -25,14 +27,24 @@ export default function StackNavigation() {
         />
         <Stack.Screen
           name="Login"
-          component={WeightScreen}
+          component={LoginScreen}
           options={{ headerShown: false }}
         />
-        {/* <Stack.Screen
+        <Stack.Screen
+          name="DriverType"
+          component={DriverType}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
           name="HomeTab"
           component={BottomTab}
           options={{ headerShown: false }}
-        /> */}
+        />
+        <Stack.Screen
+          name="Weight"
+          component={WeightScaleScreen}
+          options={{ headerShown: false }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
