@@ -22,7 +22,7 @@ export default function DriverType({navigation}) {
               style={styles.button}
               onPress={() => {
                 setModalVisible(false);
-                navigation.replace('HomeTab');
+                navigation.replace('Supplier');
               }}
             >
               <Text style={styles.buttonText}>Supplier</Text>
@@ -31,7 +31,7 @@ export default function DriverType({navigation}) {
               style={styles.button}
               onPress={() => {
                 setModalVisible(false);
-                navigation.replace('HomeTab');
+                navigation.replace('Client');
               }}
             >
               <Text style={styles.buttonText}>Client</Text>

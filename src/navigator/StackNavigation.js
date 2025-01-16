@@ -7,6 +7,8 @@ import BottomTab from './BottomTab';
 import LoginScreen from '../screens/LoginScreen';
 import DriverType from '../screens/DriverType';
 import WeightScaleScreen from '../screens/WeightScaleScreen';
+import ClientScreen from '../screens/ClientScreen';
+import SupplierScreen from '../screens/SupplierScreen';
 
 const Stack = createStackNavigator();
 
@@ -43,6 +45,16 @@ export default function StackNavigation() {
         <Stack.Screen
           name="Weight"
           component={WeightScaleScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Client"
+          component={ClientScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Supplier"
+          component={SupplierScreen}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

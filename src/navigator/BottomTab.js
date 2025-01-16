@@ -3,7 +3,7 @@ import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import WeightScaleScreen from '../screens/WeightScaleScreen';
-import HomeScreen from '../screens/HomeScreen';
+import DriverType from '../screens/DriverType';
 
 export default function BottomTab() {
   const TabNav = createBottomTabNavigator();
@@ -24,7 +24,21 @@ export default function BottomTab() {
       }}>
       <TabNav.Screen
         name="Home"
-        component={HomeScreen}
+        component={DriverType}
+        options={{
+          headerShown: false,
+          tabBarIcon: ({focused}) => (
+            <Ionicons
+              name={focused ? 'home' : 'home-outline'}
+              size={21}
+              color={focused ? '#0163d2' : 'grey'}
+            />
+          ),
+        }}
+      />
+      <TabNav.Screen
+        name="Connect"
+        component={WeightScaleScreen}
         options={{
           headerShown: false,
           tabBarIcon: ({focused}) => (
